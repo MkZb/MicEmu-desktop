@@ -32,7 +32,7 @@
   OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 -->
 
-<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
@@ -44,9 +44,8 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.shape.Circle?>
-<?import javafx.scene.text.Font?>
 
-<VBox prefHeight="397.0" prefWidth="452.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+<VBox prefHeight="397.0" prefWidth="452.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="micemu.FXMLController">
   <children>
     <MenuBar prefHeight="25.0" prefWidth="333.0" VBox.vgrow="NEVER">
       <menus>
@@ -87,22 +86,21 @@
         </Menu>
       </menus>
     </MenuBar>
-    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="372.0" prefWidth="246.0" VBox.vgrow="ALWAYS">
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="372.0" prefWidth="454.0" VBox.vgrow="ALWAYS">
       <children>
-        <Label alignment="CENTER" layoutX="155.0" layoutY="177.0" style="&#10;" text="Drag components from Library here…" textAlignment="CENTER" textFill="#9f9f9f" wrapText="false">
-          <font>
-            <Font size="18.0" />
-          </font>
-        </Label>
             <ToggleButton layoutX="337.0" layoutY="311.0" mnemonicParsing="false" text="Run" />
             <Circle fill="RED" layoutX="388.0" layoutY="323.0" radius="6.0" stroke="BLACK" strokeType="INSIDE" />
             <TextField editable="false" layoutX="69.0" layoutY="310.0" />
             <TextField editable="false" layoutX="32.0" layoutY="310.0" prefHeight="25.0" prefWidth="37.0" text="IP:" />
             <Slider layoutX="376.0" layoutY="46.0" minorTickCount="2" orientation="VERTICAL" value="100.0" />
             <TextField alignment="CENTER" editable="false" layoutX="351.0" layoutY="16.0" prefHeight="25.0" prefWidth="63.0" text="Volume" />
-            <ScrollPane layoutX="32.0" layoutY="16.0" prefHeight="270.0" prefWidth="272.0">
+            <ScrollPane layoutX="32.0" layoutY="16.0" prefHeight="280.0" prefWidth="280.0">
               <content>
-                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="264.0" prefWidth="266.0" />
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="278.0" prefWidth="265.0">
+                     <children>
+                        <ListView fx:id="audioInputList" prefHeight="278.0" prefWidth="265.0" />
+                     </children>
+                  </AnchorPane>
               </content>
             </ScrollPane>
       </children>
