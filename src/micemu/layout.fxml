@@ -88,8 +88,8 @@
     </MenuBar>
     <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="372.0" prefWidth="454.0" VBox.vgrow="ALWAYS">
       <children>
-            <ToggleButton layoutX="337.0" layoutY="311.0" mnemonicParsing="false" text="Run" />
-            <Circle fill="RED" layoutX="388.0" layoutY="323.0" radius="6.0" stroke="BLACK" strokeType="INSIDE" />
+            <ToggleButton fx:id="runToggle" layoutX="337.0" layoutY="311.0" mnemonicParsing="false" text="Run" />
+            <Circle fx:id="recordingLight" fill="RED" layoutX="388.0" layoutY="323.0" radius="6.0" stroke="BLACK" strokeType="INSIDE" />
             <TextField editable="false" layoutX="69.0" layoutY="310.0" />
             <TextField editable="false" layoutX="32.0" layoutY="310.0" prefHeight="25.0" prefWidth="37.0" text="IP:" />
             <Slider layoutX="376.0" layoutY="46.0" minorTickCount="2" orientation="VERTICAL" value="100.0" />
